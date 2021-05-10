@@ -1,13 +1,22 @@
+<<<<<<< Updated upstream
+=======
+# production
+/build
+
+>>>>>>> Stashed changes
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< Updated upstream
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+=======
+>>>>>>> Stashed changes
 
 # Runtime data
 pids
@@ -20,12 +29,19 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+<<<<<<< Updated upstream
 *.lcov
+=======
+>>>>>>> Stashed changes
 
 # nyc test coverage
 .nyc_output
 
+<<<<<<< Updated upstream
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+=======
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+>>>>>>> Stashed changes
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -34,31 +50,44 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+<<<<<<< Updated upstream
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+=======
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+>>>>>>> Stashed changes
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
+<<<<<<< Updated upstream
 # TypeScript v1 declaration files
 typings/
 
 # TypeScript cache
 *.tsbuildinfo
 
+=======
+# Typescript v1 declaration files
+typings/
+
+>>>>>>> Stashed changes
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
 
+<<<<<<< Updated upstream
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
+=======
+>>>>>>> Stashed changes
 # Optional REPL history
 .node_repl_history
 
@@ -70,6 +99,7 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< Updated upstream
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -102,3 +132,12 @@ dist
 
 # TernJS port file
 .tern-port
+=======
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+>>>>>>> Stashed changes
