@@ -9,17 +9,26 @@ const bodyTheme = document.querySelector('body');
 themeSwitch.addEventListener('change', changeBodyTheme);
 
 function changeBodyTheme(e) {
-    const checkedButton = themeSwitch.checked
-
-
-    if (checkedButton) {
-        bodyTheme.classList.add(Theme.DARK);
-        bodyTheme.classList.remove(Theme.LIGHT);
-        localStorage.setItem('theme', 'dark-theme');
-
+    if (e.target.checked) {
+        replaceTheme(Theme.LIGHT, Theme.DARK);
     } else {
-        bodyTheme.classList.remove(Theme.DARK);
-        bodyTheme.classList.add(Theme.LIGHT);
-        localStorage.setItem('theme', 'light-theme');
+        replaceTheme(Theme.DARK, Theme.LIGHT);
     }
+}
+
+function setThemeCheckbox() {
+    if (localStorage.getItem('theme') === Theme.DARK) {
+        bodyTheme.classList.add(Theme.DARK)
+        themeSwitch.setAttribute('checked', 'true');
+    } else {
+        bodyTheme.classList.add(Theme.LIGHT)
+    }
+}
+
+setThemeCheckbox();
+
+const replaceTheme = (oldTheme, newTheme) => {
+  bodyTheme.classList.add(newTheme);
+  bodyTheme.classList.remove(oldTheme);
+  localStorage.setItem('theme', newTheme);
 }
