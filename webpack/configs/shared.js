@@ -63,6 +63,7 @@ module.exports = env => ({
       },
       {
         test: /\.hbs$/,
+        exclude: /node_modules/,
         use: 'handlebars-loader',
       },
     ],

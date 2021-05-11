@@ -1,27 +1,22 @@
+import menuTemplate from './templates/templates.hbs';
+import menuItem from './menu.json';
+
+import './theme.js';
+
 import './styles.css';
 
-const Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme',
-};
+const menuContainer = document.querySelector('.js-menu');
+const menuMarkUp = menuListRender(menuItem);
+menuContainer.insertAdjacentHTML('beforeend', menuMarkUp);
 
-const themeSwitch = document.querySelector('#theme-switch-toggle');
-const bodyTheme = document.querySelector('body');
+// console.log(menuTemplate(menuItem[1]))
 
-themeSwitch.addEventListener('change', changeTheme);
-
-function changeTheme(e) {
-    const checkedButton = themeSwitch.checked
-
-
-    if (checkedButton) {
-        bodyTheme.classList.add(Theme.DARK);
-        bodyTheme.classList.remove(Theme.LIGHT);
-        localStorage.setItem('theme', 'dark-theme');
-
-    } else {
-        bodyTheme.classList.remove(Theme.DARK);
-        bodyTheme.classList.add(Theme.LIGHT);
-        localStorage.setItem('theme', 'light-theme');
-    }
+function menuListRender(menuItem) {
+    // return menuItem
+    //     .map(item => menuTemplate(item))
+    //     .join('');
+    
+    return menuItem
+        .map(menuTemplate)
+        .join('');
 }
